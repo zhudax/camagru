@@ -1,0 +1,1 @@
+ErrorDocument 404 http://localhost:8080/camagru/views/pages/404.php
