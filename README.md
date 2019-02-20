@@ -16,6 +16,7 @@ Create an account, and check your email to activate it. (If you use MAMP, check 
 Connect to your account, and now you can take photos.
 ![camagru](./assets/camagru.png)
 ![camagru](./assets/camagru1.png)
+![camagru](./assets/camagru2.png)
 
 ### Our stack
 

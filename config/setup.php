@@ -60,8 +60,17 @@ try
 		$login = "User0" . $i;
 		$pw_hash = hash("whirlpool", "User0" . $i);
 		$mail = $login . '@zxu.fr';
-		$sql = "INSERT INTO `user` (`login`, `password`, `mail`, `mail_v`) VALUES
-		('$login', '$pw_hash', '$mail', '1')";
+		if (ft_inTab($db, 'user', 'login', $login) ||
+			ft_inTab($db, 'user', 'mail', $mail))
+		{
+			echo "sorry login ou email a deja ete utiliser :(<br />";
+			break ;
+		}
+		else
+		{
+			$sql = "INSERT INTO `user` (`login`, `password`, `mail`, `mail_v`)
+			VALUES('$login', '$pw_hash', '$mail', '1')";
+		}
 		// echo "$sql";
 		ft_query($db, $sql);
 		$i++;
